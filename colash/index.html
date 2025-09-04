@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collage de Imágenes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-image" onclick="toggleFullScreenImage(0)">
+        <img src="flor.jpeg" alt="Fondo">
+    </div>
+
+    <div class="collage">
+        <img src="ada.jpeg" alt="Imagen 1" class="image" onclick="toggleFullScreenImage(1)">
+        <img src="cascada.jpeg" alt="Imagen 2" class="image" onclick="toggleFullScreenImage(2)">
+        <img src="montanias.jpeg" alt="Imagen 3" class="image" onclick="toggleFullScreenImage(3)">
+        <img src="descarga.jpeg" alt="Imagen 4" class="image" onclick="toggleFullScreenImage(4)">
+    </div>
+
+    <div id="fullscreen-image" class="fullscreen-image">
+        <div class="image-info">
+            <h2 id="image-title">Título de la Imagen</h2>
+            <p id="image-description">Descripción de la imagen</p>
+        </div>
+        <img id="fullscreen-img" src="" alt="Imagen Completa">
+        <button onclick="toggleFullScreenImage(-1)">Cerrar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
