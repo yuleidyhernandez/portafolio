@@ -1,0 +1,24 @@
+<div class="flex w-full justify-center items-center">
+    <div class="bg-white h-12 w-fit flex p-2">
+        <!-- add autofocus -->
+        <input class="w-0 focus:outline-none" type="text" id="input-search" placeholder="Search..."/> 
+        <img class="h-8 cursor-pointer" src="https://th.bing.com/th/id/R.4603c7a88ec2a7a70dc8be9dda9e0de1?rik=mDYQxF6sJMiq2w&riu=http%3a%2f%2f3.bp.blogspot.com%2f-yjsyBXSEJYc%2fUxH7-ydpbUI%2fAAAAAAAAAGI%2fIe0mbEpDWEk%2fs1600%2flupa.jpg&ehk=JthBZDUXZWKXei9L4CfvOc%2bYX7XX07Fgbfg5kHNrnhc%3d&risl=&pid=ImgRaw&r=0" alt="Search Icon" id="icon-search"/>
+    </div>
+</div>
+
+<style>
+    #input-search {
+        transition: width 0.5s;
+    }
+</style>
+
+<script>
+    const input = document.getElementById("input-search");
+    const icon = document.getElementById("icon-search");
+
+    icon?.addEventListener("click", () => {
+        input?.classList.toggle("w-40");
+        input?.focus();
+    });
+
+</script>

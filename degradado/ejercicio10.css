@@ -1,0 +1,184 @@
+/*Estilos a mi body*/
+body {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(16, 22, 43);
+}
+/*estilos de mi linea y signos*/
+.uno{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+}
+
+.signos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.5em;
+    font-weight: 800;
+    height: 3rem;
+    color: rgb(80, 75, 75);
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.lineas{
+    border-bottom: 0.3rem dotted rgb(80, 75, 75);
+    width: 100%;
+}
+
+.titulo{
+    font-size: 2em;
+    color: rgb(80, 75, 75);
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+/*Estilos donde iran mis imagenes*/
+.segundo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.image1{
+    background-image: url(imagen1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15rem;
+    height: 25rem;
+    border-radius: 45px;
+
+}
+
+.image2{
+    background-image: url(imagen2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15rem;
+    height: 25rem;
+    border-radius: 45px;
+
+}
+
+.image3{
+    background-image: url(imagen3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15rem;
+    height: 25rem;
+    border-radius: 45px;
+
+}
+
+.image4{
+    background-image: url(imagen4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15rem;
+    height: 25rem;
+    border-radius: 45px;
+
+    
+}
+
+.num{
+    font-size: 2rem;
+    margin-top: -2em;
+    margin-left: 0rem;
+    width: 15rem;
+    height: 25rem;
+    border-radius: 45px;
+    /* background-color: white; */
+    background: rgb(255,255,255);
+    background: linear-gradient(115deg, rgba(255,255,255,1) 5%, rgba(9,9,121,0) 31%, rgba(108,108,175,0) 59%, rgba(254,254,254,1) 100%);
+}
+
+.num:hover{
+    color: transparent;
+    background: transparent;
+    
+}
+.numero{
+    width: 15rem;
+    margin-left: 2rem;
+    margin-top: 2em;
+}
+
+
+/*Estilos de los botones de mi pagina*/
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5rem;
+    width: 30rem;
+    height: 4rem;
+    border-radius: 15px;
+    background-color:rgb(99, 93, 93);
+    margin-left: 25rem;
+
+}
+.botones_n{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.boton1{
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 2em;
+    color: cornflowerblue;
+    border: rgb(61, 59, 59);
+    background-color: rgb(99, 93, 93);
+    margin-left: 0.3rem;
+    background-color:white ;
+    border-radius: 5px;
+}
+.boton{
+    width: 3em;
+    height: 3em;
+    font-size: 1em;
+    color: white;
+    border: rgb(61, 59, 59);
+    background-color: rgb(99, 93, 93);
+    margin-left: 0.3rem;
+
+
+}
+.boton1:hover{
+    color:white ;   
+    background-color: cornflowerblue;
+}
+
+.boton:hover{
+    background-color: cornflowerblue;
+}
+
+.puntos{
+    width: 3em;
+    height: 3em;
+    font-size: 1em;
+    background-color: rgb(99, 93, 93);
+}
+ .punto{
+    font-size: 2.5em;
+    margin-top: -0.2rem;
+    margin-left: 1rem;
+    color: white;
+    position: relative;
+ }
+
+

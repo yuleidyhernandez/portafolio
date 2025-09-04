@@ -1,0 +1,90 @@
+---
+interface Props {
+    lengthProgress: number;
+}
+const { lengthProgress } = Astro.props;
+
+const classGeneral =
+    "w-10 h-10 flex justify-center items-center bg-white rounded-full";
+const classLine = "w-24";
+const classBorder = "border-solid border-[0.2rem] border-gray-300";
+const classBtn = "bg-blue-500 text-white px-4 py-2 rounded-md";
+---
+
+<div class="h-screen w-full flex flex-col justify-center items-center gap-4">
+    <div id="progress-content" class="flex w-full justify-center items-center">
+        {
+            Array.from({ length: lengthProgress }, (_, index) => {
+                return (
+                    <>
+                        <div class="step flex items-center">
+                            
+                            {index > 0 && (
+                                <div class={`${classLine} ${classBorder}`} />
+                            )}
+
+                            <div
+                                class:list={[
+                                    classGeneral,
+                                    classBorder,
+                                    { "border-blue-500": index === 0 },
+                                ]}
+                            >
+                                {index + 1}
+                            </div>
+                        </div>
+                    </>
+                );
+            })
+        }
+    </div>
+    <div class="flex-row">
+        <button class={classBtn} id="btnPrev">Prev</button>
+        <button class={classBtn} id="btnNext">Next</button>
+    </div>
+</div>
+
+<script>
+    const progressContent = document.getElementById("progress-content");
+    const btnPrev = document.getElementById("btnPrev") as HTMLButtonElement;
+    const btnNext = document.getElementById("btnNext") as HTMLButtonElement;
+
+    let currentStep = 1;
+    btnPrev.disabled = true;
+    const lengthProgress = progressContent?.getElementsByClassName("step").length ?? 0;
+    console.log(lengthProgress);
+    btnPrev.addEventListener("click", () => {
+        if (currentStep > 0) {
+            currentStep--;
+            updateProgress();
+        }
+    });
+
+    btnNext.addEventListener("click", () => {
+        if (currentStep < lengthProgress) {
+            currentStep++;
+            updateProgress();
+        }
+    });
+
+    function updateProgress() {
+        console.log(currentStep + " / " + lengthProgress);
+        progressContent &&
+            Array.from(progressContent.childNodes).forEach((node, index) => {
+                if (index % 2 === 1) {
+                    const step = index / 2 + 1;
+                    const element = node as HTMLElement;
+                    if (step < currentStep + 1 ) {
+                        element.children[0].classList.add("!border-blue-500");
+                        element.children[1] && element.children[1].classList.add("!border-blue-500");
+                    } else {
+                        element.children[0] && element.children[0].classList.remove("!border-blue-500");
+                        element.children[1] && element.children[1].classList.remove("!border-blue-500");
+                    }
+                }
+            });
+
+        btnPrev.disabled = currentStep === 1;
+        btnNext.disabled = currentStep === lengthProgress;
+    }
+</script>

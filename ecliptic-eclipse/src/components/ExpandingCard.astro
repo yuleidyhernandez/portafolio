@@ -1,0 +1,27 @@
+
+
+---
+interface Props {
+	title: string;
+    image: string;
+}
+
+const { title, image } = Astro.props;
+---
+
+
+        <!-- "carta flex items-end w-1/12 p-6 rounded-[50px] bg-no-repeat bg-cover bg-red-300",
+        `bg-[url('${image}')]` -->
+
+<div class:list= {["carta flex items-end w-1/12 p-6 rounded-[50px] bg-no-repeat bg-cover bg-red-300",
+        `url('${image}')`]} style=`background-image: url('${image}')`>
+    
+    <h3 class:list={
+        [
+            "text-white text-2xl font-bold",
+            "hidden" 
+        ]
+    }>
+        {title}
+    </h3>
+</div>

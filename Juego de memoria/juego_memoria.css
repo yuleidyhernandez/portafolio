@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+.padre{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 19% 19% 19% 20% 19%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    gap: 1%;
+}
+
+.uno{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 1s; 
+    transform-style: preserve-3d;
+
+}
+
+.adelante, .atras{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    backface-visibility: hidden;
+}
+
+img{
+    width: 100%;
+    height: 100%;  
+}
+
+.uno:hover{ 
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.atras{
+    transform: rotateY(180deg);
+}
+
+

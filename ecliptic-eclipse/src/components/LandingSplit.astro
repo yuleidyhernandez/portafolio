@@ -1,0 +1,57 @@
+---
+const classBox = "box-item w-1/2 bg-blue-500 flex flex-col items-center gap-6 bg-cover bg-no-repeat font-bold overflow-hidden relative hover:w-11/12 before:opacity-40 before:w-full before:h-full before:absolute before:z-0";
+const classButton = "border-2 h-16 w-60 flex justify-center  items-center font-bold";
+---
+
+<div class="h-screen w-full flex text-white relative">
+    <div class:list={[classBox,"before:bg-purple-300"]} style="background-image: url('https://th.bing.com/th/id/OIP.H-USL9HTpq35kWW7BBxRdQAAAA?rs=1&pid=ImgDetMain');">
+        <h1 class="text-6xl whitespace-nowrap z-10 mt-40">Playstation 5</h1>
+        <a href="#" class:list={[classButton,"hover:bg-purple-500 hover:border-purple-500 z-10"]}>
+            BUY NOW
+        </a>
+    </div>
+    <div class:list={[classBox,"before:bg-green-300"]} style="background-image: url('https://th.bing.com/th/id/OIF.f2PYVY0qBVJAxoSWIRnBKQ?rs=1&pid=ImgDetMain');">
+        <h1 class="text-6xl whitespace-nowrap z-10 mt-40">Xbox Series X</h1>
+        <a href="#" class:list={[classButton,"hover:bg-green-500 hover:border-green-500 z-10"]}>
+            BUY NOW
+        </a>
+    </div>
+</div>
+
+<style>
+    .box-item {
+        transition: all 2s;
+    }
+</style>
+
+<script>
+    const boxes = document.getElementsByClassName("box-item");
+    Array.from(boxes).forEach((box, index, arrayOriginal) => {
+        box.addEventListener("mouseenter", () => {
+            box.classList.add("w-1/2");
+            box.classList.remove("w-1/4");
+            arrayOriginal.forEach((boxOriginal, indexOriginal) => {
+                if (indexOriginal !== index) {
+                    boxOriginal.classList.add("w-1/4");
+                    boxOriginal.classList.remove("w-1/2");
+                }
+            });
+        });
+
+        box.addEventListener("mouseleave", () => {
+            box.classList.add("w-1/2");
+            box.classList.remove("w-1/4");
+            arrayOriginal.forEach((boxOriginal, indexOriginal) => {
+                if (indexOriginal !== index) {
+                    boxOriginal.classList.add("w-1/2");
+                    boxOriginal.classList.remove("w-1/4");
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+ 

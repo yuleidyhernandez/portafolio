@@ -1,0 +1,85 @@
+/*Estilos del body y primer imagen de fondo*/
+/**/
+body{
+    background-image: url(ima1.jpg) ;    
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position:relative;      
+    background-size: cover;
+    
+}
+
+
+/*Estilos de mi titulo*/
+h1{
+    font-size: 5em;
+    color:chartreuse;
+    text-align: center;
+    background-position: relative;
+    margin-top: 3em;
+
+}
+
+/*Estilos de mi primer section de texto*/
+.seccion1{
+    background-color: blanchedalmond;
+    margin-bottom: -1em;
+    margin-top: 50em;
+}
+
+/*Estilos de mi primer imagen scrol */
+.uno{
+    background-image:url(ima2.jpg) ;     
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position:relative;      
+    background-size: cover;
+    height: 55rem;
+    margin-bottom: -50em;
+}
+
+/*Estilos de mi segunda seccion de texto*/
+.seccion2{
+    height: -50%;
+    background-color: aqua;
+    margin-top: 50em;
+    margin-bottom: -50em;
+}
+
+/*Estilos de mi tercera imagen scrol*/
+.dos{
+    background-image:url(ima3.jpg) ;     
+}
+
+.dos, .tres {
+
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position:relative;      
+    background-size: cover;
+    height: 50em;
+    margin-top: 50em;
+}
+
+/*Estilos de mi tercera seccion de texto*/
+.seccion3{
+    height: -50%;
+    background-color:aquamarine;
+    margin-top:-5em;
+    margin-bottom: -50em;
+}
+
+/*Estilos de mi cuarta imagen scrol*/
+.tres{
+    background-image:url(ima4.jpg) ;     
+}
+
+/*Estilos de cuarta seccion de texto*/
+.seccion4{
+    height: 35em;
+    margin-top:-5em;
+    margin-bottom: -50em;
+    text-align: center;
+}
+
+

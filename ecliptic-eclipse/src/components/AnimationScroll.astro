@@ -1,0 +1,49 @@
+<div class="flex flex-col items-center w-full gap-4">
+    <h1 class="text-3xl font-bold">
+        Scroll to see the Animation
+    </h1>
+    {
+        Array.from({ length: 10 }, (_, index) => {
+            return (
+                <div class:list={["flex justify-center font-bold items-center text-5xl scroll-item bg-blue-700 text-white p-4 h-48 w-96 rounded-xl shadow-xl shadow-black/25",
+                {"translate-x-[200%]": index % 2 == 0},
+                {"translate-x-[-200%]":index % 2 == 1}]}>
+                    Item {index + 1}
+                </div>
+            );
+        })
+    }
+</div>
+
+<style>
+    .scroll-item {
+        transition: transform 1s ease;
+    }
+</style>
+
+<script>
+
+    const heightScreen = window.innerHeight / 5 * 4;
+    /* console.log(window.innerHeight) */
+
+    const scrollItems = document.getElementsByClassName("scroll-item");
+
+    handleScroll();
+
+    window.addEventListener("scroll", () => {
+        handleScroll();
+    });
+
+    function handleScroll() {
+        Array.from(scrollItems).forEach((element, index) => {
+            const position = element.getBoundingClientRect().top;
+            const item = element as HTMLElement;
+            if(position < heightScreen) {
+                item.style.transform = `translateX(0)`;
+            }else {
+                item.style.transform = index % 2 == 0 ? `translateX(200%)` : `translateX(-200%)`;
+            }
+        });
+    }
+   
+</script>

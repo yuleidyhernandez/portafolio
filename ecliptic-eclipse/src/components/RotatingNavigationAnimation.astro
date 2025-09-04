@@ -1,0 +1,102 @@
+<div class="flex flex-col items-between top-0 left-0">
+    <div
+        id="menu-burguer"
+        class="flex gap-4 flex-col justify-center items-end z-10 h-48 w-48 bg-orange-500 rounded-full fixed -top-20 -left-20"
+    >
+        <i class="hidden-nav size-20 text-3xl bi bi-x-lg"></i>
+        <i class="text-3xl size-20 bi bi-list"></i>
+    </div>
+    <nav
+        id="nav-menu"
+        class="nav-menu top-0 left-0 h-full fixed flex flex-col justify-end -z-10"
+    >
+        <ul class="p-4 text-blackfont-bold  ">
+            <li class="ml-6 text-white font-bold text-xl mb-8"><i class="bi bi-house-fill text-white text-3xl"></i>Home</li>
+            <li class="ml-12 text-white font-bold text-xl "><i class="bi bi-person-fill text-white text-3xl"></i>About</li>
+            <li class="ml-20 text-white font-bold text-xl"><i class="bi bi-envelope-fill text-white text-3xl"></i>Contact</li>
+        </ul>
+    </nav>
+</div>
+
+<div class="flex flex-col items-between top-0 left-0">
+    <div
+        id="menu-burguer"
+        class="flex gap-4 flex-col justify-center items-end z-10 h-48 w-48 bg-orange-500 rounded-full fixed -top-20 -left-20"
+    >
+        <img
+            id="hidden-nav"
+            class="hidden-nav size-20"
+            src="images/burguer.webp"
+            alt="Burguer Icon"
+        />
+        <img class="size-20" src="images/burguer.webp" alt="Burguer Icon" />
+    </div>
+    <nav
+        id="nav-menu"
+        class="nav-menu top-0 left-0 h-full fixed flex flex-col justify-end rotate-[45deg]"
+    >
+        <ul class="p-4">
+            <li class="ml-6">Home</li>
+            <li class="ml-12">About</li>
+            <li class="ml-20">Contact</li>
+        </ul>
+    </nav>
+</div>
+
+<div id="div-rotate" class="z-10 bg-white w-full p-12 flex flex-col gap-4">
+    <div class="tittle">
+        <h1 class="text-3xl font-semibold">Amazing Article</h1>
+        <h4 class="text-gray-600 italic">Frorin Pop</h4>
+    </div>
+    <p class="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        quia in ratione dolores cupiditate, maxime aliquid impedit dolorem nam
+        dolor omnis atque fuga labore modi veritatis porro laborum minus, illo,
+        maiores recusandae cumque ipsa quos. Tenetur, consequuntur mollitia
+        labore pariatur sunt quia harum aut. Eum maxime dolorem provident natus
+        veritatis molestiae cumque quod voluptates ab non, tempore cupiditate?
+        Voluptatem, molestias culpa. Corrupti, laudantium iure aliquam rerum
+        sint nam quas dolor dignissimos in error placeat quae temporibus minus
+        optio eum soluta cupiditate! Cupiditate saepe voluptates laudantium.
+        Ducimus consequuntur perferendis consequatur nobis exercitationem
+        molestias fugiat commodi omnis. Asperiores quia tenetur nemo ipsa.
+    </p>
+    <h2 class="text-xl font-semibold">My Dog</h2>
+    <img
+        src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+        alt="My Dog"
+    />
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit libero
+        deleniti rerum quo, incidunt vel consequatur culpa ullam. Magnam facere
+        earum unde harum. Ea culpa veritatis magnam at aliquid. Perferendis
+        totam placeat molestias illo laudantium? Minus id minima doloribus
+        dolorum fugit deserunt qui vero voluptas, ut quia cum amet temporibus
+        veniam ad ea ab perspiciatis, enim accusamus asperiores explicabo
+        provident. Voluptates sint, neque fuga cum illum, tempore autem maxime
+        similique laborum odio, magnam esse. Aperiam?
+    </p>
+</div>
+
+<script>
+    const burguer = document.getElementById("menu-burguer") as HTMLDivElement;
+    const rotate = document.getElementById("div-rotate") as HTMLDivElement;
+    const nav = document.getElementById("nav-menu") as HTMLDivElement;
+
+    if (burguer) {
+        burguer.addEventListener("click", () => {
+            if (rotate && nav) {
+                burguer.classList.toggle("-rotate-[270deg]");
+                burguer
+                    .getElementsByClassName("hidden-nav")[0]
+                    .classList.toggle("-rotate-[90deg]");
+                nav.classList.toggle("rotate-[0deg]");
+                rotate.classList.toggle("-rotate-[20deg]");
+                rotate.classList.toggle("-translate-y-48");
+                rotate.classList.toggle("translate-x-48");
+
+            }
+        });
+    }
+</script>
+

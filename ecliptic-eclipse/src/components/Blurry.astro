@@ -1,0 +1,31 @@
+<div id="opacity-img" class="absolute blur-[100px] h-screen w-full bg-cover bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1576161787924-01bb08dad4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80')">
+</div>
+<span id="loading-span" class="absolute text-white text-9xl" >
+    0%
+</span>
+
+<script>
+    const img = document.getElementById("opacity-img");
+    const span = document.getElementById("loading-span");
+    let load = 0;
+    let interval = 0;
+
+    function handleInterval() {
+        load++;
+
+        if (load > 99) {
+            clearInterval(interval);
+        }
+
+        if(img && span) {
+            img.style.filter = `blur(${100 - load}px)`;
+            span.style.opacity = `${100 - load}%`;
+            span.innerText = `${load}%`;
+        }
+    }
+
+    interval = setInterval(handleInterval, 20);
+
+    
+
+</script>
