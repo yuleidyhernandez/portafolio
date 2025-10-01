@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a Mi Página Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mí</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>Formulario de Contacto</h2>
+        <form action="#" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section class="table-section">
+        <h2>Lista de Productos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Disponibilidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Producto A</td>
+                    <td>$25.00</td>
+                    <td>Disponible</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Producto B</td>
+                    <td>$40.00</td>
+                    <td>Agotado</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Producto C</td>
+                    <td>$15.00</td>
+                    <td>Disponible</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

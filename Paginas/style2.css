@@ -1,0 +1,153 @@
+/* Estilo general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Fondo de la página */
+body {
+  background-color: #f1f1f1;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Barra de navegación */
+nav {
+  background-color: #3498db;
+  /* Color azul brillante */
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover en los enlaces de la barra de navegación */
+nav ul li a:hover {
+  color: #f39c12;
+  /* Cambio de color al pasar el mouse */
+}
+
+/* Sección bienvenida */
+.bienvenida {
+  text-align: center;
+  padding: 100px 20px;
+  /* Aumentamos el espacio para que se vea más grande */
+  background-color: #2ecc71;
+  /* Fondo verde */
+  color: #fff;
+}
+
+.bienvenida h1 {
+  font-size: 3rem;
+  /* Aumentamos el tamaño del título */
+  margin-bottom: 20px;
+}
+
+.bienvenida p {
+  font-size: 1.5rem;
+  /* Aumentamos el tamaño del texto */
+}
+
+/* Sección sobre mí */
+.sobre-mi {
+  padding: 80px 20px;
+  background-color: #ecf0f1;
+  /* Fondo gris claro */
+  text-align: center;
+}
+
+.sobre-mi h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.sobre-mi p {
+  font-size: 1.2rem;
+}
+
+/* Sección de contenido */
+.contenido {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.contenido h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.servicio {
+  display: inline-block;
+  width: 300px;
+  /* Aumentamos el tamaño de los servicios */
+  margin: 20px;
+  padding: 30px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover en los servicios */
+.servicio:hover {
+  transform: translateY(-10px);
+  /* Desplazamiento hacia arriba */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Sombra más grande */
+}
+
+.servicio h3 {
+  font-size: 1.8rem;
+  color: #3498db;
+}
+
+.servicio p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+/* Sección de contacto */
+.contacto {
+  padding: 80px 20px;
+  background-color: #34495e;
+  /* Fondo oscuro */
+  color: #fff;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contacto p {
+  font-size: 1.2rem;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #34495e;
+  /* Fondo oscuro */
+  color: #fff;
+  width: 98.5%;
+}

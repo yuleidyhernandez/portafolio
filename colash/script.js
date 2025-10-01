@@ -20,5 +20,7 @@ function toggleFullScreenImage(index) {
         imageDescription.textContent = images[index - 1].description;
         fullscreenImage.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-    }
+    } 
 }
+
+      
